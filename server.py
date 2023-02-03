@@ -26,8 +26,8 @@ def process_money():
         add_gold = randint(-50, 50)
         session['moves'] += 1
         session['gold'] += add_gold
-        session['activities'].append({'message': f"You got {session['gold']}. You now have {session['total_gold']} gold."})
-    print(add_goldp)
+        session['activities'].append({'message': f"You got {session['gold']}."})
+    print(add_gold)
     return redirect ('/')
 
 @app.route('/reset_game')

@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gold_box {
+    margin: 20px;
+    padding: 5px;
+    font-size: 1.5em;
+}
+.gold_tally {
+    border: 2px solid black;
+    padding: 5px;
+}
+.locations {
+    margin: 20px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+form {
+    margin: 30px;
+    padding: 15px;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 1.5em;
+}
+p {
+    margin: 10px;
+    font-weight: bolder;
+}
+button {
+    font-weight: bold;
+    padding: 5px;
+    background-color: gold;
+}
+.activities {
+    margin: 20px 150px;
+    height: 190px;
+    width: 1200px;
+    font-size: 1.5em;
+    border: 3px solid black;
+}
+.reset_button {
+    margin-left: 1250px;
+    height: 40px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: crimson;
+    text-align: center;
+}
+.reset {
+    text-decoration: none;
+    color: white
+}

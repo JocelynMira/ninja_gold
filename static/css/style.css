@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Itim', cursive;
+    background-color: black;
+    /* border: 1px solid red; */
+}
+h1 {
+    margin: 10px;
+    text-align: center;
+    font-size: 3em;
+    color: gold;
 }
 .status_bar {
     display: flex;
@@ -9,12 +18,14 @@
     align-items: center;
 }
 .gold_box, .moves {
-    margin: 20px;
+    margin: 10px;
     padding: 5px;
     font-size: 1.5em;
+    color: bisque;
 }
 .gold_tally, .moves_tally {
     border: 2px solid black;
+    color: gold;
     padding: 5px;
 }
 .locations {
@@ -22,34 +33,88 @@
     display: flex;
     justify-content:space-around;
     align-items: center;
+    color: antiquewhite;
 }
 form {
     margin: 30px;
     padding: 15px;
     border: 3px solid black;
     text-align: center;
+    background-color: rgba(169, 169, 169, 0.318);
+}
+.block {
+    font-size: 2em;
+}
+.earning {
     font-size: 1.5em;
-    background-color: rgba(163, 160, 160, 0.514);
-
+    background-color: rgba(169, 169, 169, 0);
 }
 p {
     margin: 10px;
-    font-weight: bolder;
+    font-weight: lighter;
+    background-color: black;
 }
 button {
     font-weight: bold;
     padding: 5px;
     background-color: gold;
+    font-size: 1em;
+}
+.subcontainer {
+    height: 350px;
+    width: 1250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .activities {
-    margin: 20px 150px;
-    height: 190px;
-    width: 1200px;
-    font-size: 1em;
-    border: 3px solid black;
+    margin: 20px 80px;
+    height: 300px;
+    width: 550px;
+    color: antiquewhite;
+    background-color: black;
+    font-size: medium;
+    border: 2px solid antiquewhite;
+    overflow: scroll;
+}
+.list {
+    color: antiquewhite;
+    font-size: 1.4em;
+    background-color: black;
+}
+.rules_reset {
+    height: 250px;
+    width: 270px;
+}
+h4 {
+    height: 40px;
+    width: 100px;
+    background-color: black;
+    color: antiquewhite;
+    font-weight:lighter;
+    font-size: x-large;
+}
+h5 {
+    margin: 5px;
+    height: 50px;
+    width: 200px;
+    background-color: black;
+    color: antiquewhite;
+    font-weight:lighter;
+    font-size: larger;
+}
+
+.rules {
+    height: 50px;
+    width: 200px;
+    color: antiquewhite;
+    text-align: center;
+
 }
 .reset_button {
-    margin-left: 1250px;
+    margin-left: 62px;
+    margin-top: 100px;
     height: 40px;
     width: 100px;
     border: 2px solid black;
@@ -58,5 +123,6 @@ button {
 }
 .reset {
     text-decoration: none;
+    background-color: crimson;
     color: white
 }

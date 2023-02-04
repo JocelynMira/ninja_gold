@@ -1,6 +1,6 @@
 from flask import Flask, session, render_template, redirect, request
 from random import randint
-
+from datetime import datetime
 
 app = Flask (__name__)
 app.secret_key = 'gold_is_life'
@@ -26,15 +26,20 @@ def process_money():
         add_gold = randint(-50, 50)
     session['gold'] += add_gold
     session['moves'] += 1
-    session['activities'].append({'Activity': f"Earned {session['gold']} gold from the {location}."})
+    if add_gold > 0:
+        linecolor = 'green'
+    else:
+        linecolor = 'red'
+    session['activities'].insert( 0,{'Activity': f" <p style='color: {linecolor}'> Earned {add_gold} gold from the {location}. {datetime.now()} </p> "})
+    print(add_gold)
     return redirect('/')
+    #insert instead of append will insert item at a given position so we start index at index 0.
 
 
 @app.route('/reset_game')
 def reset_game():
     session.clear()
     return redirect ('/')
-
 
 if __name__ == '__main__':
     app.run(debug=True)

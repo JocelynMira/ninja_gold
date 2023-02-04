@@ -8,36 +8,41 @@
     <title>Ninja Gold</title>
 </head>
 <body>
-    <div class='gold_box'>
-        <h3>Your gold: <span class ='gold_tally'>{{session['gold']}}</span></h3>
+    <div class="status_bar">
+        <div class='gold_box'>
+            <h3>Your gold: <span class ='gold_tally'>{{session['gold']}}</span></h3>
+        </div>
+        <div class="moves">
+            <h3>Moves: <span class ='moves_tally'>{{session['moves']}}</span></h3>
+        </div>
     </div>
     
     <div class='locations'>
         <form action='/process_money' method='POST'>
             <h3>Farm</h3>
-            <p>(earns 10-20 golds)</p>
+            <p>(earns 10-20 gold)</p>
             <input type='hidden' name='location' value='farm'><button>Find Gold!</button>
         </form>
         <form action='/process_money' method='POST'>
             <h3>Cave</h3>
-            <p>(earns 5-10 golds)</p>
+            <p>(earns 5-10 gold)</p>
             <input type='hidden' name='location' value='cave'><button>Find Gold!</button>
         </form>
         <form action='/process_money' method='POST'>
             <h3>House</h3>
-            <p>(earns 2-5 golds)</p>
+            <p>(earns 2-5 gold)</p>
             <input type='hidden' name='location' value='house'><button>Find Gold!</button>
         </form>
         <form action='/process_money' method='POST'>
             <h3>Casino</h3>
-            <p>(earns/takes 0-50 golds)</p>
+            <p>(earns/takes 0-50 gold)</p>
             <input type='hidden' name='location' value='casino'><button>Find Gold!</button>
         </form>
     </div>
     <div class='activities'>
         <p>Activities:</p>
     {% for activity in session['activities'] %}
-        
+        <p>{{activity['Activity']}}</p>
     {% endfor %}
     </div>
     <div class='reset_button'>

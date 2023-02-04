@@ -24,11 +24,11 @@ def process_money():
         add_gold = randint(2,5)
     else:
         add_gold = randint(-50, 50)
-        session['moves'] += 1
-        session['gold'] += add_gold
-        session['activities'].append({'message': f"You got {session['gold']}."})
-    print(add_gold)
-    return redirect ('/')
+    session['gold'] += add_gold
+    session['moves'] += 1
+    session['activities'].append({'Activity': f"Earned {session['gold']} gold from the {location}."})
+    return redirect('/')
+
 
 @app.route('/reset_game')
 def reset_game():
